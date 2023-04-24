@@ -1,0 +1,31 @@
+.shopping-cart {
+  height: 3rem;
+}
+
+.product {
+  width: 200px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin: 10px;
+  text-align: center;
+}
+
+.shopping-cart-container {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: #f5f5f5;
+  padding: 20px;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease;
+}
+
+.shopping-cart-container.open {
+  right: 0;
+}
+
+.shopping-cart-toggle {
+  cursor: pointer;
+}
