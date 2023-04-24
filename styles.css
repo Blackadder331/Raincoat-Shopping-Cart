@@ -1,6 +1,30 @@
-.shopping-cart {
-  height: 3rem;
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
+
+html {
+    font-family: "Neue Montreal", Helvetica, sans-serif;
+}
+
+nav {
+    color: #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 5vw;
+    background-color: rgb(24, 27, 77);
+
+
+    position: relative;
+    z-index: 20;
+}
+
+.shopping-cart {
+  height: 2.5rem;
+}
+
 
 .product {
   width: 200px;
@@ -10,14 +34,19 @@
   text-align: center;
 }
 
+.raincoat {
+    max-width: 100%;
+}
+
 .shopping-cart-container {
   position: fixed;
   top: 0;
   right: -300px;
   width: 300px;
-  height: 100%;
+  padding-top: 10vh;
+  min-height: 100vh;
   background-color: #f5f5f5;
-  padding: 20px;
+  padding-left: 20px;
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
   transition: right 0.3s ease;
 }
