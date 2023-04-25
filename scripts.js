@@ -73,12 +73,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Show feedback to the user
     const button = event.target;
-    const originalText = button.textContent;
-    button.textContent = "Added!";
+    const originalText =   button.innerHTML;
+    button.innerHTML = "<span><span> Added! </span></span>";
     button.disabled = true;
 
     setTimeout(() => {
-      button.textContent = originalText;
+      button.innerHTML = originalText;
       button.disabled = false;
     }, 1000);
   }
@@ -153,3 +153,24 @@ document.addEventListener("DOMContentLoaded", () => {
     shoppingCartContainer.classList.toggle("open");
   }
 });
+
+//slider
+let currentSlide = 1;
+const totalSlides = 3;
+const slideDuration = 4000;
+
+function changeSlide() {
+  const current = document.querySelector(
+    `.slide[data-slide="${currentSlide}"]`
+  );
+  current.classList.remove("active");
+
+  currentSlide = (currentSlide % totalSlides) + 1;
+
+  const next = document.querySelector(`.slide[data-slide="${currentSlide}"]`);
+  next.classList.add("active");
+
+  setTimeout(changeSlide, slideDuration);
+}
+
+setTimeout(changeSlide, slideDuration);
